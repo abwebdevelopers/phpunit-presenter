@@ -1,0 +1,28 @@
+{
+    "name": "abwebdevelopers/phpunit-presenter",
+    "description": "A presentable result printer for PHPUnit",
+    "type": "library",
+    "keywords": [
+        "phpunit", "printer", "results", "presentation", "unit", "tests"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Thomson",
+            "email": "ben@abweb.com.au"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/ABWebDevelopers/phpunit-presenter",
+        "issues": "https://github.com/ABWebDevelopers/phpunit-presenter/issues"
+    },
+    "require": {
+        "league/climate": "^3.5",
+        "phpunit/phpunit": "^7.5"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "jakub-onderka/php-console-highlighter": "^0.4.0"
+    }
+}

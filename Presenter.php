@@ -721,7 +721,7 @@ class Presenter extends Printer implements TestListener
                 $this->cli->darkGray()->out($details['errors'][0]['file']);
                 $this->cli->red()->out($details['errors'][0]['message']);
                 $this->cli->br();
-                $this->cli->darkGray()->out('Line ' . $details['errors'][0]['line'] . ' | ' . $line);
+                $this->cli->out('Line ' . $details['errors'][0]['line'] . ' | ' . $line);
 
                 if (isset($details['errors'][0]['diff'])) {
                     $this->cli->green()->out('Expected: ' . $details['errors'][0]['diff']['expected']);
@@ -773,22 +773,26 @@ class Presenter extends Printer implements TestListener
             $first = false;
 
             // Find offending line
-            $line = $this->getLine($details['errors'][0]['file'], $details['errors'][0]['line']);
+            $line = $this->getLine($details['errors'][0]->getFile(), $details['errors'][0]->getLine());
 
             if ($this->config['colours']) {
                 $this->cli->bold()->inline($details['suite'] . '::');
                 $this->cli->out($details['test']);
-                $this->cli->darkGray()->out($details['errors'][0]['file']);
-                $this->cli->red()->out($details['errors'][0]['message']);
+                $this->cli->darkGray()->out($details['errors'][0]->getFile());
+                $this->cli->red()->out($details['errors'][0]->getMessage());
                 $this->cli->br();
-                $this->cli->darkGray()->out('Line ' . $details['errors'][0]['line'] . ' | ' . $line);
+                $this->cli->out('Line ' . $details['errors'][0]->getLine() . ' | ' . $line);
+                $this->cli->br();
+                $this->cli->darkGray()->out($details['errors'][0]->getTraceAsString());
             } else {
                 $this->cli->inline($details['suite'] . '::');
                 $this->cli->out($details['test']);
-                $this->cli->out($details['errors'][0]['file']);
-                $this->cli->out($details['errors'][0]['message']);
+                $this->cli->out($details['errors'][0]->getFile());
+                $this->cli->out($details['errors'][0]->getMessage());
                 $this->cli->br();
-                $this->cli->out('Line ' . $details['errors'][0]['line'] . ' | ' . $line);
+                $this->cli->out('Line ' . $details['errors'][0]->getLine() . ' | ' . $line);
+                $this->cli->br();
+                $this->cli->out($details['errors'][0]->getTraceAsString());
             }
         }
     }

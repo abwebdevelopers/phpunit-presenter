@@ -16,6 +16,11 @@
         "source": "https://github.com/ABWebDevelopers/phpunit-presenter",
         "issues": "https://github.com/ABWebDevelopers/phpunit-presenter/issues"
     },
+    "autoload": {
+        "files": [
+            "Presenter.php"
+        ]
+    },
     "require": {
         "league/climate": "^3.5",
         "phpunit/phpunit": "^7.5"

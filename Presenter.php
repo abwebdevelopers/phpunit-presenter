@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace SelfManager\Tests;
+namespace ABWebDevelopers\PHPUnitPresenter;
 
 use PHPUnit\Framework\TestListener;
 use PHPUnit\Framework\AssertionFailedError;
@@ -72,7 +72,7 @@ class Presenter extends Printer implements TestListener
 
     /**
      * Buffer flush method.
-     * 
+     *
      * This is overriden from PHPUnit's default result printer to print the results, as well as exceptions and errors
      * that were encountered during the tests.
      *
@@ -100,7 +100,7 @@ class Presenter extends Printer implements TestListener
 
     /**
      * Incremental flush method.
-     * 
+     *
      * This has been stubbed out from the original PHPUnit Printer method.
      *
      * @return void
@@ -111,7 +111,7 @@ class Presenter extends Printer implements TestListener
 
     /**
      * Buffer write method.
-     * 
+     *
      * This has been stubbed out from the original PHPUnit Printer method.
      *
      * @param string $buffer
@@ -123,7 +123,7 @@ class Presenter extends Printer implements TestListener
 
     /**
      * Get auto buffer flush method.
-     * 
+     *
      * This has been stubbed out from the original PHPUnit Printer method.
      *
      * @return boolean
@@ -135,7 +135,7 @@ class Presenter extends Printer implements TestListener
 
     /**
      * Set auto buffer flush method.
-     * 
+     *
      * This has been stubbed out from the original PHPUnit Printer method.
      *
      * @param boolean $autoFlush

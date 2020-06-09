@@ -5,6 +5,8 @@ colour support and better displays of errors and failures.
 
 ![Presenter Output](https://abweb.com.au/img/presenter.png)
 
+**This has _only_ been tested with PHPUnit `^7.5`**. However, this plugin still allows PHPUnit up to `^9.0` (via composer.json) to ease dependency restrictions but please note that things may not work as expected (use at your own 'risk').
+
 ## Features
 
 - Different formatting types depending on your preferences.
